@@ -99,4 +99,10 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionArray()
+    {
+        return $this->render('practiceArray', [
+        ]);
+    }
+
 }
