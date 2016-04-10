@@ -110,11 +110,17 @@ class SiteController extends Controller
     {
         $model = new EntryForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+        if ($model->load(Yii::$app->request->post())
+            && $model->validate()) {    // 验证$model收到的数据
 
-
-        } else {
-
+            echo 'name: '.$model->name.'; email: '.$model->email;
+            return $this->render('entry-confirm', [
+                'model' => $model,
+            ]);
+        } else {    // 无论是初始化失败, 还是数据验证错误
+            return $this->render('entry', [
+                'model' => $model,
+            ]);
         }
     }
 
