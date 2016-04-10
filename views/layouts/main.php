@@ -43,6 +43,7 @@ AppAsset::register($this);
             ['label' => '函数', 'url' =>['/site/func']],
             ['label' => '数组', 'url' =>['/site/array']],
             ['label' => '提交表单', 'url' =>['/site/entryfrom']],
+            ['label' => '国家', 'url' =>['/country/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
