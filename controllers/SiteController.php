@@ -125,9 +125,9 @@ class SiteController extends Controller
     }
 
 
-    public function actionFuc()
+    public function actionFunc()
     {
-        return $this->render('practiceArray', [
+        return $this->render('func', [
         ]);
     }
 
