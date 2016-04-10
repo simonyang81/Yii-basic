@@ -40,8 +40,9 @@ AppAsset::register($this);
 //            ['label' => 'About', 'url' => ['/site/about']],
 //            ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'SayHello', 'url' =>['/site/say']],
+            ['label' => '函数', 'url' =>['/site/func']],
             ['label' => '数组', 'url' =>['/site/array']],
-            ['label' => '提交表单', 'url' =>['/site/entry']],
+            ['label' => '提交表单', 'url' =>['/site/entryfrom']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (

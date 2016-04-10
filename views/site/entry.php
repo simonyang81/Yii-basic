@@ -14,6 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
         'labelOptions' => ['class' => 'col-lg-1 control-label'],
     ],
+    'action' => 'index.php?r=site/entryfrom',
 ]); ?>
 
 <?= $form->field($model, 'name') ?>

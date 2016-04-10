@@ -106,7 +106,7 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionEntry()
+    public function actionEntryfrom()
     {
         $model = new EntryForm();
 
@@ -122,6 +122,13 @@ class SiteController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+
+    public function actionFuc()
+    {
+        return $this->render('practiceArray', [
+        ]);
     }
 
 }
