@@ -44,6 +44,7 @@ AppAsset::register($this);
             ['label' => '数组', 'url' =>['/site/array']],
             ['label' => '提交表单', 'url' =>['/site/entryfrom']],
             ['label' => '国家', 'url' =>['/country/index']],
+            ['label' => '邮件表单', 'url' =>['/email/indexform']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (

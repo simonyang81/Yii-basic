@@ -35,6 +35,9 @@ $config = [
         'country' => [
             'class' => 'app\controllers\CountryController'
         ],
+        'email' => [
+            'class' => 'app\controllers\EmailController'
+        ],
     ],
 ];
 
