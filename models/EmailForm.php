@@ -16,6 +16,7 @@ class EmailForm extends Model
 
     public $name;
     public $email;
+    public $subject;
     public $feedback;
 
     public function rules()
@@ -25,6 +26,7 @@ class EmailForm extends Model
             [['name', 'email'], 'required'],
             // email必须符合email格式
             ['email', 'email'],
+            ['subject', 'string'],
             ['feedback', 'string'],
         ];
     }

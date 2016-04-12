@@ -11,19 +11,21 @@ $this->params['breadcrumbs'][] = $this->title;
     'id' => 'email-form',
     'options' => ['class' => 'form-horizontal'],
     'fieldConfig' => [
-        'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-        'labelOptions' => ['class' => 'col-lg-1 control-label'],
+        'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div>{error}</div>",
+        'labelOptions' => ['class' => 'col-lg-2 control-label',],
     ],
     'action' => 'index.php?r=email/send',
 ]); ?>
 
 <?= $form->field($model, 'name') ?>
-<?= $form->field($model, 'email') ?>
+<?= $form->field($model, 'email',
+    ['labelOptions' => ['label' => 'Email Address: ',]]) ?>
+<?= $form->field($model, 'subject') ?>
 <?= $form->field($model, 'feedback')->textarea(['rows' => '10']) ?>
 
 
 <div class="form-group">
-    <div class="col-lg-offset-1 col-lg-11">
+    <div class="col-lg-offset-2 col-lg-11">
         <?= Html::submitButton('Send feedback', ['class' => 'btn btn-primary']) ?>
     </div>
 </div>
